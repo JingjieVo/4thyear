@@ -1,12 +1,13 @@
 // customers.js
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 // Customer Schema
 const customerSchema = new mongoose.Schema({
     customerId: {
         type: Number,
         required: true,
-        min: 1
+        min: 1,
+        unique: true
     },
     gender: {
         type: String,
@@ -45,6 +46,6 @@ const customerSchema = new mongoose.Schema({
     }
 });
 
-export const Customer = mongoose.model('Customer', customerSchema);
-
+const Customer = mongoose.model('Customer', customerSchema);
+export default Customer;
 
