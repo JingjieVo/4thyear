@@ -1,4 +1,4 @@
-import Customer from '../schema/customer/index.js'
+import Customer from '../schema/customer.js'
 
 const customerController = {
     // Tạo mới Customer (Create)
